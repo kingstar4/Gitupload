@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Dancing+Script&family=Open+Sans:wght@300;400&family=Poppins:wght@200;300&family=Roboto:wght@100;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.cover{
+    background: linear-gradient(to bottom left, #00ff99 20%, #3366ff 100%);
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+   
+}
+h1{
+    color: white;
+    font-weight: 500;
+    font-size: 50px;
+    animation-name:change;
+    animation-duration:2s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    width: 30vw;
+    height:10vh;
+}
+@keyframes change{
+    from{color:white;
+         
+    }
+    to{color:darkblue;
+      
+    }
+
+}
+.form-modal{
+    width: 400px;
+    min-height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+}
+.textfield{
+    width:300px;
+    margin:0.8em 0;
+    background-color: rgb(245, 245, 245);
+    border-radius: 50px;
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px ;
+    font-weight: 500;
+}
+.textfield input{
+    width:100%;
+    padding: 1em 1.5em;
+    background-color: transparent;
+    border:none ;
+    border-radius: 50px;
+}
+.textfield input:focus{
+    outline:none;
+}
+.submitBtn{
+    width:150px;
+    padding:1em;
+    margin:2em 0;
+    border-radius: 50px;
+    outline:none;
+    border: none;
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px ;
+    font-weight:600;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: Arial;
+}
+.submitBtn:hover{
+    background: linear-gradient(to bottom left, #00ff99 20%, #3366ff 100%);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+#result{
+    display:none;
+    width:150px;
+    padding:1em;
+    margin:2em 0;
+    border-radius: 50px;
+    outline:none;
+    border: none;
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px ;
+    font-weight:600;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: Arial;
+}#result:hover{
+    background: linear-gradient(to bottom left, #00ff99 20%, #3366ff 100%);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 100px;
+    
+
+
+}
+.header{
+    background: linear-gradient(to bottom left, #00ff99 20%, #3366ff 100%);
+    color:#fff;
+    padding:25px;
+    border-top-left-radius: 10px;
+
+}
+.content{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding:0;
+    border:1px solid #888;
+    border-radius: 10px;
+    width:80%;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: moveDown;
+    -webkit-animation-duration: 0.4s;
+    animation-name: moveDown;
+    animation-duration: 0.4s;
+   
+   
+}
+
+.modal-body{
+    padding:2px 16px;
+}
+@-webkit-keyframes moveDown{
+    from{top: -300px; opacity:0}
+    to{top:0; opacity:1}
+}
+@keyframes moveDown{
+    from{top: -300px; opacity:0}
+    to{top:0; opacity:1}
+}
+.close{
+    color: #fff;
+    float:right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,.close:focus{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+}
+#Progressive {
+    width: 70%;
+    background-color: #ddd;
+    display:none;
+    border-radius: 10px;
+   
+  }
+  
+  #Bar {
+    width: 1%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+  @media screen and (max-width:900px){
+    h1{
+     font-size:30px;
+     display:inline-block;
+
+    }
+
+  }

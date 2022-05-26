@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Dancing+Script&family=Open+Sans:wght@300;400&family=Poppins:wght@200;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="cover">
+        <h1>Diabetise Test</h1>
+            <form action="{{ url_for('predict')}}"method="post" class="form">
+
+            
+        <div class="form-modal" id="form">
+            <div class="textContainer" id="container">
+                <div class="textfield">
+                    <input type="number"  name = "preg"  placeholder="Pregnancies" required>
+                </div> 
+                <div class="textfield">
+                    <input type="number" name = "glu"  placeholder="Glucose" required>
+                </div>
+                <div class="textfield">
+                    <input type="number" name = "BP"  placeholder="Blood Pressure" required>
+                </div>
+                <div class="textfield">
+                    <input type="number" name = "SK"  placeholder="Skin Thinkness" required>
+                </div>
+                <div class="textfield">
+                    <input type="number" name = "IL"  placeholder="Insulin Level" required>
+                </div>
+                <div class="textfield">
+                    <input type="text" name = "BMI" placeholder="BMI" required>
+                </div>
+                <div class="textfield">
+                    <input type="text" name = "DPF" placeholder="Diabetes Pedigree Function" required>
+                </div>
+                <div class="textfield">
+                    <input type="number" name = "AGE"  placeholder="Age" required>
+                </div>
+            </div>
+                 <!--FOR PROGRESSIVE OR LOADING BAR  -->
+                <div id="Progressive">
+                    <div id="Bar"></div>
+                  </div>
+                  
+            
+
+                <button type="submit" value="submit" id="submit" class="submitBtn">Submit</button>
+                <button type="menu" id="result">Result</button>
+            </div>  
+            
+                <div id="modalpage" class="modal">
+
+                    <div class="content">
+                        <div class="header">
+                         <span class="close">&times;</span>
+                            <h2>Test Result</h2>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <h2>{{ prediction_text }}</h2>
+                            <br>
+                            <h4>Please do well to make an appointment with a doctor between 5 working days.
+                                The following drugs might be prescribed for you.
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
+   </div>
+
+ <script src="main.js"></script>
+</body>
+</html>
